@@ -1,0 +1,35 @@
+div.c{
+
+	background-color: royalblue;
+
+	margin-left: 250px;
+	margin-right: 10px;
+	text-align: right;
+
+}
+a{
+	padding:10px;
+	
+	
+	
+	color: white;
+	
+text-decoration: none;
+
+}
+a:hover{
+	background-color: #4287f5;
+
+}
+div.b{
+	background-color: royalblue;
+	color: white;
+	height: 100px;
+}
+tr{
+	background-color: grey;
+}
+td{
+	text-align: center;
+}
+
